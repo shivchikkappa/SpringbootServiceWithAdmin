@@ -17,7 +17,7 @@ Docker
 
 4. Application will start running on port 9080
 
-# Build and Run the application using docker 
+# Build the application docker image
 
 1. Clone the repo from github
 
@@ -37,13 +37,19 @@ Docker
     
     docker run -d --restart unless-stopped --name mydemoapplication -p 9080:9080 -p 9085:9085 mydemoapplication
     
-6. Give a moment for container to start and check if it's running 
+# Run the application using docker image
+
+1. Start the container using below command 
+    
+    docker run -d --restart unless-stopped --name mydemoapplication -p 9080:9080 -p 9085:9085 mydemoapplication
+    
+2. Give a moment for container to start and check if it's running using below command
 
     docker container ls
     
     213bf1d8cc92        mydemoapplication        "java -jar /demoprac…"   9 seconds ago       Up 8 seconds        0.0.0.0:9080->9080/tcp, 0.0.0.0:9085->9085/tcp   mydemoapplication
 
-7. Stop and remove the container
+3. Stop and remove the container
 
     docker container stop mydemoapplication
     docker container rm mydemoapplication
