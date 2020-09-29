@@ -6,14 +6,14 @@ The tutorial assumes that users have basic knowledge of springboot, springboot a
 1. [Build docker images](#build-docker-images)
 2. [Create docker network](#create-docker-network)
 3. [Start docker containers](#start-docker-containers)
-4. [Docker command options explained](#docker-command-options-explained)
-5. [Docker compose solution](#docker-compose-solution)
+4. [Start docker containers compose](#start-docker-containers-compose)
+5. [Docker command options explained](#docker-command-options-explained)
 
 ## Build docker images
 
 1. Clone the repo from github
-2. cd springbootadmin and follow the Readme.md to build the docker image 
-3. cd DemoApplication and follow the instuctions from Readme.md to build the docker image.
+2. cd springbootadmin and follow the [README.md](https://github.com/shivchikkappa/SpringbootServiceWithAdmin/blob/master/springbootadmin/README.md) to build the docker image 
+3. cd DemoApplication and follow the instuctions from [README.md](https://github.com/shivchikkappa/SpringbootServiceWithAdmin/blob/master/DemoApplication/README.md) to build the docker image.
 
 ## Create docker network
 
@@ -29,9 +29,9 @@ docker network ls
 ```bash
 docker network inspect springboot-admin
 ```
-## Start docker containers
+## Start docker containers without compose
 
-1. Start the springboot admin associated with "sprignboot-admin" network using option "--network springboot-admin". The value used with --name should be the value used in springboot microservice application property spring.boot.admin.client.url [Link](https://github.com/shivchikkappa/SpringbootServiceWithAdmin/blob/master/DemoApplication/src/main/resources/application.properties)
+1. Start the springboot admin associated with "sprignboot-admin" network using option "--network springboot-admin". The value used with --name should be the value used in springboot microservice [application.properties](https://github.com/shivchikkappa/SpringbootServiceWithAdmin/blob/master/DemoApplication/src/main/resources/application.properties) property spring.boot.admin.client.url
   
 ```bash
 docker run -d --restart unless-stopped --network springboot-admin --name myspringbootadmin -e spring_boot_admin_notify_mail_from=from@domainname -p 9060:9060 -p 9065:9065 myspringbootadmin
@@ -90,7 +90,20 @@ docker network inspect springboot-admin
 ]
 ```
 
-4. Access the springboo admin console at http://localhost:9060 to confirm springboot microsevice is registed and status is "up". Use the credentials configured in springboot admin application properties file [Link](https://github.com/shivchikkappa/SpringbootServiceWithAdmin/blob/master/springbootadmin/src/main/resources/application.properties)
+4. Access the springboo admin console at http://localhost:9060 to confirm springboot microsevice is registed and status is "up". Use the credentials configured in springboot admin [application.properties](https://github.com/shivchikkappa/SpringbootServiceWithAdmin/blob/master/springbootadmin/src/main/resources/application.properties).
+
+## Start docker containers compose
+
+1. Start the containers using docker compose. The -d flag will start the containers in the background.
+```bash
+docker compose up -d 
+```
+2. Access the springboo admin console at http://localhost:9060 to confirm springboot microsevice is registed and status is "up". Use the credentials configured in springboot admin [application.properties](https://github.com/shivchikkappa/SpringbootServiceWithAdmin/blob/master/springbootadmin/src/main/resources/application.properties).
+
+3. Start the containers using docker compose
+```bash
+docker compose down 
+``` 
 
 ## Docker command options explained
 
