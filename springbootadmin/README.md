@@ -21,7 +21,7 @@ Docker
 
 5. Admin UI can be accessed at http://localhost:9060/login 
 
-# Build and Run the application using docker 
+# Build the application docker image
 
 1. Clone the repo from github
 
@@ -30,18 +30,20 @@ Docker
 3. Build the image using below command
 
     docker build . -t myspringbootadmin
+    
+# Run the application using docker image
 
-5. Start the container using below command 
+1. Start the container using below command 
     
     docker run -d --restart unless-stopped --name myspringbootadmin -p 9060:9060 -p 9065:9065 myspringbootadmin
     
-5. Give a moment for container to start and check if it's running using below command
+2. Give a moment for container to start and check if it's running using below command
 
     docker container ls
     
     ad1c0362b09f        myspringbootadmin        "java -jar /springbo…"   25 seconds ago      Up 24 seconds       0.0.0.0:9060->9060/tcp, 0.0.0.0:9065->9065/tcp   myspringbootadmin
 
-6. Stop and remove the container using below command
+3. Stop and remove the container using below command
 
     docker container stop myspringbootadmin
     docker container rm myspringbootadmin
