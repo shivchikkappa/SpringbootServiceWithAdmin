@@ -94,6 +94,8 @@ docker network inspect springboot-admin
 
 ## Start docker containers compose
 
+When using the docker compoase, no need to create the network i.e. skip the step 2 and 3!
+
 1. Start the containers using docker compose. The -d flag will start the containers in the background.
 ```bash
 docker compose up -d 
