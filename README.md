@@ -5,7 +5,7 @@ The tutorial assumes that users have basic knowledge of springboot, springboot a
 
 1. [Build docker images](#build-docker-images)
 2. [Create docker network](#create-docker-network)
-3. [Start docker containers](#start-docker-containers)
+3. [Start docker containers without compose](#start-docker-containers-without-compose)
 4. [Start docker containers compose](#start-docker-containers-compose)
 5. [Docker command options explained](#docker-command-options-explained)
 
