@@ -95,8 +95,14 @@ docker network inspect springboot-admin
 ## Docker command options explained
 
 -d                       --> Start the docker container in detach mode
+
 --restart unless-stopped --> Start the container again without manual intevention if the host is restarted
+
 --network <network name> --> Docker network the container needs to be associated
+  
 --name <container name>  --> Custom docker container name instead of radom name associated by docker 
+  
 -e <Key=value>           --> Springboot application properties override 
+
 -p <port:port>           --> External port to be exposed and internal application port  
+
