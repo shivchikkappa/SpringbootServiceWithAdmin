@@ -3,7 +3,6 @@ This tutorial will walk you through the process of creating springboot microserv
 
 The tutorial assumes that users have basic knowledge of springboot, springboot admin and docker.
 
-These are the following steps:
 1. [Build docker images](#build-docker-images)
 2. [Create docker network](#create-docker-network)
 3. [Start docker containers](#start-docker-containers)
