@@ -12,8 +12,8 @@ The tutorial assumes that users have basic knowledge of springboot, springboot a
 ## Build docker images
 
 1. Clone the repo from github
-2. cd springbootadmin and follow the Readme.md to build the docker image 
-3. cd DemoApplication and follow the instuctions from Readme.md to build the docker image.
+2. cd springbootadmin and follow the [README.md](https://github.com/shivchikkappa/SpringbootServiceWithAdmin/blob/master/springbootadmin/README.md) to build the docker image 
+3. cd DemoApplication and follow the instuctions from [README.md](https://github.com/shivchikkappa/SpringbootServiceWithAdmin/blob/master/DemoApplication/README.md) to build the docker image.
 
 ## Create docker network
 
