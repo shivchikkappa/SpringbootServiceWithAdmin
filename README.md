@@ -30,7 +30,7 @@ docker network ls
 ```bash
 docker network inspect springboot-admin
 ```
-## Start docker containers individually
+## Start docker containers
 
 1. Start the springboot admin associated with "sprignboot-admin" network using option "--network springboot-admin". The value used with --name should be the value used in springboot microservice application property spring.boot.admin.client.url [Link](https://github.com/shivchikkappa/SpringbootServiceWithAdmin/blob/master/DemoApplication/src/main/resources/application.properties)
   
