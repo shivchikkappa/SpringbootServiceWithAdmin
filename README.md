@@ -7,7 +7,7 @@ These are the following steps:
 1. [Build docker images](#build-docker-images)
 2. [Create docker network](#create-docker-network)
 3. [Start docker containers](#start-docker-containers)
-4. [Docker command options explained] (#docker-command-options-explained)
+4. [Docker command options explained](#docker-command-options-explained)
 5. [Docker compose solution](#docker-compose-solution)
 
 ## Build docker images
